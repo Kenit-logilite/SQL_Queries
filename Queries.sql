@@ -111,3 +111,17 @@ Orders on Person.personId = Orders.personId;
 --  TOP Records
 
 	SELECT * from person Limit 3;
+	
+--  Min and Max Aggregate Function
+
+	Create table Product(
+	productId int NOT NULL Primary key,
+	pname varchar(50) NOT NULL,
+	price int NOT NULL
+)
+
+Insert Into product(productId,pname,price) Values (1,'abc',1000),(2,'cde',1500),(3,'cdscc',2000);
+
+select MIN(price) as smallestPrice from product;
+
+select MAX(price) as biggestPrice from product;
