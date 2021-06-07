@@ -45,3 +45,18 @@ insert into person(personId,FisrtName,LastName,Address,city) values (1,'Kenit','
 insert into person(personId,FisrtName,LastName,Address,city) values (1,'Kunal','Patel','Ahmedabad','Ahmedabad');
 
 Drop table Person;
+
+-- Primary Key
+
+Create table Person(
+	personId int NOT NULL Primary key,
+	FisrtName varchar(50) NOT NULL,
+	LastName varchar(50) NOT NULL,
+	Address varchar(200) NOT NULL,
+	city varchar (50) NOT NULL
+);
+
+insert into person(personId,FisrtName,LastName,Address,city) values (1,'Kenit','Patel','Ahmedabad','Ahmedabad');
+insert into person(personId,FisrtName,LastName,Address,city) values (1,'Kunal','Patel','Ahmedabad','Ahmedabad');
+Drop table Person;
+
