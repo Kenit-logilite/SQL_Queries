@@ -107,3 +107,7 @@ Orders on Person.personId = Orders.personId;
 	 Select Orders.orderId ,Orders.OrderNumber, person.FisrtName
 	 from Person Full Outer Join
 	 Orders on Person.personId = Orders.personId;
+	 
+--  TOP Records
+
+	SELECT * from person Limit 3;
