@@ -15,3 +15,18 @@ Alter table Person Add email varchar(50);
 Alter table Person Drop email;
 
 Drop table Person;
+
+-- Understanding of Constraints
+
+
+-- NOT NULL
+Create table Person(
+	personId int NOT NULL,
+	FisrtName varchar(50) NOT NULL,
+	LastName varchar(50) NOT NULL,
+	Address varchar(200) NOT NULL,
+	city varchar (50) NOT NULL
+);
+
+insert into person(personId,LastName,Address,city) values (1,'Patel','Ahmedabad','Ahmedabad');
+Drop table Person
