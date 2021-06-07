@@ -95,3 +95,9 @@ Person on Orders.personId = person.personId;
 Select Orders.orderId ,Orders.OrderNumber, person.FisrtName
 from Person Left join 
 Orders on Person.personId = Orders.personId; 
+
+ -- 	Right Join
+	
+	Select Orders.orderId ,Orders.OrderNumber, person.FisrtName
+	from Person Right join
+	Orders on Person.personId = Orders.personId;
