@@ -60,3 +60,31 @@ insert into person(personId,FisrtName,LastName,Address,city) values (1,'Kenit','
 insert into person(personId,FisrtName,LastName,Address,city) values (1,'Kunal','Patel','Ahmedabad','Ahmedabad');
 Drop table Person;
 
+-- Joins
+
+Create table Person(
+	personId int NOT NULL Primary key,
+	FisrtName varchar(50) NOT NULL,
+	LastName varchar(50) NOT NULL,
+	Address varchar(200) NOT NULL,
+	city varchar (50) NOT NULL
+);
+
+CREATE table Orders (
+    OrderID int NOT NULL Primary key,
+    OrderNumber int NOT NULL,
+    personID int,
+    FOREIGN KEY (personID) REFERENCES Person(PersonID)
+);
+
+insert into person(personId,FisrtName,LastName,Address,city) values (1,'Kenit','Patel','Ahmedabad','Ahmedabad');
+insert into Orders(OrderId,OrderNumber,personId) values (1,101,1),(2,102,1),(3,103,3),(4,104,4),(5,106,3);
+
+insert into person(personId,FisrtName,LastName,Address,city) values 
+									(3,'Kunal','Makwana','abc','Gandhinagar'),
+									(4,'Raju','Panchal','cds','Sabarkantha'),
+									(5,'Ramesh','Parjapati','lol','Jamnagar');
+									
+Select Orders.OrderId ,  person.FisrtName
+From Orders Inner Join
+Person on Orders.personId = person.personId;
