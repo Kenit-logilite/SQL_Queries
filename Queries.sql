@@ -125,3 +125,12 @@ Insert Into product(productId,pname,price) Values (1,'abc',1000),(2,'cde',1500),
 select MIN(price) as smallestPrice from product;
 
 select MAX(price) as biggestPrice from product;
+
+
+-- Count,avg,Sum
+
+select count(productId) from product;
+
+select avg(price) from product;
+
+select sum(price) from product;
