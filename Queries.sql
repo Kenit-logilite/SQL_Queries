@@ -88,3 +88,10 @@ insert into person(personId,FisrtName,LastName,Address,city) values
 Select Orders.OrderId ,  person.FisrtName
 From Orders Inner Join
 Person on Orders.personId = person.personId;
+
+
+-- Left Join
+
+Select Orders.orderId ,Orders.OrderNumber, person.FisrtName
+from Person Left join 
+Orders on Person.personId = Orders.personId; 
